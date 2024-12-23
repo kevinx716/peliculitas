@@ -1,0 +1,277 @@
+body {
+    background-color: #141414;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #e50914;
+    padding: 10px;
+}
+
+a:hover {
+    color: #f1f1f1;
+}
+
+.contenedor_cabezera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141414;
+    border-bottom: 2px solid #333;
+}
+
+.titulo {
+    font-size: 36px;
+    color: #e50914;
+    margin: 0;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.navegacion a {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navegacion a:hover {
+    color: #e50914;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.desplegable {
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu:hover .desplegable {
+    color: #e50914;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.menu-desplegable a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-desplegable a:hover {
+    background-color: #e50914;
+    color: #fff;
+}
+
+.menu:hover .menu-desplegable {
+    display: block;
+}
+
+.seccion-peliculas {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.cartelera-pelis {
+    text-align: center;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.imagen-pelis {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.cartelera-pelis h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.cartelera-pelis h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #b0b0b0;
+}
+
+.cartelera-pelis p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.cartelera-pelis:hover .imagen-pelis {
+    transform: scale(1.1);
+}
+
+.cartelera-pelis:hover {
+    transform: translateY(-10px);
+}
+
+.pelis-cuadro {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.cartelera-pelis {
+    width: 30%;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #141414;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+.links-pie a {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+.links-pie a:hover {
+    color: #e50914;
+}
+
+
+@media (max-width: 1024px) {
+    .contenedor_cabezera {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .navegacion {
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: flex-start; 
+    }
+
+    .navegacion a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .seccion-peliculas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartelera-pelis {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .pelis-cuadro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartelera-pelis {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .links-pie a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedor_cabezera {
+        flex-direction: row; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .navegacion {
+        flex-direction: row;
+        align-items: center; 
+        justify-content: flex-start; 
+    }
+
+    .navegacion a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+
+    .menu-desplegable {
+        min-width: 120px;
+    }
+
+    .seccion-peliculas {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .cartelera-pelis {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .pelis-cuadro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartelera-pelis {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .links-pie a {
+        font-size: 12px;
+        margin: 8px 0;
+    }
+}
